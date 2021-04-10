@@ -1,0 +1,33 @@
+@import "../../Assets/Sass/all";
+
+.container {
+    padding: 0 30px;
+}
+
+.header {
+    color: $Carnation;
+    margin-bottom: 40px;
+}
+.input {
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba($black, 0.5);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.button {
+    height: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: $Carnation;
+    color: $white;
+    font-size: 16px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
