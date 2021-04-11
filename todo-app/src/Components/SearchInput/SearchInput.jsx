@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classes from "./SearchInput.module.scss";
-import Data from "../../Assets/Data/data";
+import Data from "../../Config/Localization";
 
 const SearchInput = ({ searchFunc, handleKeypress }) => {
   const [value, setValue] = useState();

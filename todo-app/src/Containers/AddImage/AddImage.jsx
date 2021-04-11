@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classes from "./AddImage.module.scss";
-import Data from "../../Assets/Data/data";
 import { FileUpload } from "../../Components";
+import Data from "../../Config/Localization";
 
 const AddImage = ({ addNote }) => {
   const [uploadedFile, setUploadedFile] = useState();
@@ -28,7 +28,7 @@ const AddImage = ({ addNote }) => {
             uploadedFile && addNote(uploadedFile);
           }}
         >
-          Add the Note
+          {Data.addNote}
         </button>
       </div>
     </div>

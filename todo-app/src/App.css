@@ -42,3 +42,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.map {
+  width: 100% !important;
+  position: relative !important;
+}
+
+.GoogleMapContainer {
+  background-color: #ccc;
+  height: 235px;
+  position: relative;
+}

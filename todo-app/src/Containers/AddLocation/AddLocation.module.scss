@@ -1,0 +1,193 @@
+@import "../../Assets/Sass/all";
+
+.container {
+    padding: 0 30px;
+    text-align: left;
+}
+
+.header {
+    color: $Carnation;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    height: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: $Carnation;
+    color: $white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Map {
+	z-index: 20000;
+}
+
+.MapHeader {
+	margin: 16px 27px 16px 27px;
+}
+
+.mapContainer {
+    height: 425px !important;
+}
+
+// :global .gmnoprint {
+//     z-index: 1000001 !important;
+//     position: absolute !important;
+//     right: 121px !important;
+//     bottom: 0px !important;
+//     width: 121px !important;
+// }
+
+// :global .pac-container {
+//     display: none !important;
+//     width: 335px !important;
+//     position: absolute !important;
+//     left: 833px !important;
+//     top: 881px !important;
+// }
+
+h1.Heading {
+	font-family: "CircularStd-Medium";
+	font-size: 16px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.38;
+	letter-spacing: normal;
+	color: #404553;
+	margin-bottom: -10px;
+}
+
+p.Instruction {
+	font-family: "CircularStd-Book";
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.42;
+	letter-spacing: normal;
+	color: #8c99b2;
+}
+
+.Buttons {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 26px;
+	right: 40px;
+	z-index: 2;
+}
+
+.ConfirmButton,
+.CancelButton {
+	cursor: pointer;
+}
+
+.ConfirmButton {
+	margin-left: 10px;
+}
+
+.Searchbar {
+	height: 40px;
+	background-color: white;
+	position: absolute;
+	width: 40%;
+	z-index: 3;
+	opacity: 0.95;
+	border-radius: 6px;
+	box-shadow: 0 2px 15px 0 rgba(20, 42, 68, 0.12);
+	// display: flex;
+	left: 190px;
+	top: 10px;
+}
+
+.Searchbar img {
+	width: 14px;
+	position: absolute;
+	top: 9px;
+	left: -6px;
+	margin-left: 19px;
+	margin-right: 10px;
+}
+
+.searchIcon{
+	position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #333333;
+    opacity: 0.5;
+    transform: translate(0,-50%);
+}
+
+.searchInput {
+	height: 39px;
+	padding-left: 40px;
+	font-size: 15px;
+	border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+
+::placeholder {
+	/* Most modern browsers support this now. */
+	// height: 19px !important;
+	// width: 218px !important;
+	font-size: 15px !important;
+	font-weight: 500 !important;
+	opacity: 0.5 !important;
+}
+
+// input {
+//    border:none;
+//    width:100%;
+//    outline:none;
+
+// }
+.LatAndLong {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.mR10 {
+	margin-right: 10px;
+}
+.mT10 {
+	margin-top: 25px;
+}
+
+// .{
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     z-index: 1;
+// }
+
+.locationMarker {
+	width: 17px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.selectedGoogleAddress {
+	color: #4a4a4a;
+	font-size: 16px;
+	line-height: 18px;
+}
+.NoAddrssChosen {
+	justify-content: flex-end;
+	align-self: flex-end;
+}
+.locate {
+	flex-direction: row;
+	display: flex;
+}

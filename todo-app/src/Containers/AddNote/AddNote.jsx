@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classes from "./AddNote.module.scss";
-import Data from "../../Assets/Data/data";
+import Data from "../../Config/Localization";
 
 const AddNote = ({ addNote }) => {
   const [note, setNote] = useState();
   const handleChange = (event) => {
-    console.log(event.bubbles);
     event.stopPropagation();
     setNote(event.target.value);
   };
@@ -29,7 +28,7 @@ const AddNote = ({ addNote }) => {
           note && addNote(note);
         }}
       >
-        Add the Note
+        {Data.addNote}
       </button>
     </div>
   );

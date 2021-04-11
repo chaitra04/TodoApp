@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classes from "./NoteList.module.scss";
-import Data from "../../Assets/Data/data";
+import Data from "../../Config/Localization";
 const NoteList = ({ note, deleteNote }) => {
 
   return (

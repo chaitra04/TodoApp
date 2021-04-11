@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import classes from "./FileUpload.module.scss";
-import Data from "../../Assets/Data/data";
+import Data from "../../Config/Localization";
 
 function FileUpload({ handleUpload }) {
 
@@ -25,7 +25,7 @@ function FileUpload({ handleUpload }) {
 
   const files = acceptedFiles.length > 0 ? acceptedFiles.map((file) => (
     <span key={file.path}>
-      {file.path} - {file.size} bytes
+      {file.path}
     </span>
   )) : Data.chooseFile;
 

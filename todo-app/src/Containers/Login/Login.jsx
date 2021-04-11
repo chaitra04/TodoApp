@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import classes from "./Login.module.scss";
-import Data from "../../Assets/Data/data";
+import Data from "../../Config/Localization";
+
 var jwt = require("jsonwebtoken");
+
 class Login extends Component {
   constructor() {
     super();
@@ -17,6 +19,11 @@ class Login extends Component {
     });
   };
 
+  /**
+   * Function to login
+   * create JWT token based on the user details
+   * store it in session storage
+   */
   loginFunc = () => {
     const { username, password } = this.state;
     if (username && password) {

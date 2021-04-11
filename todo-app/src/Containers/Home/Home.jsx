@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import classes from "./Home.module.scss";
-import Data from "../../Assets/Data/data";
+import Data from "../../Config/Localization";
 import { Modal, SearchInput } from "../../Components";
-import { AddNote, NoteList, AddImage } from "..";
+import { AddNote, NoteList, AddImage, AddLocation } from "..";
 
 class Home extends Component {
   constructor() {
@@ -15,6 +15,12 @@ class Home extends Component {
     };
   }
 
+  /**
+   * Function to add the notes to the list
+   * store it in session storage
+   * @param data note to be added.
+   * @param type image/note/location.
+   */
   addNote = (data, type) => {
     let note = [...this.state.note];
     let obj = {
@@ -34,6 +40,11 @@ class Home extends Component {
     );
   };
 
+  /**
+   * Function to delete the notes from the list
+   * store it in session storage
+   * @param id unique id of the note.
+   */
   deleteNote = (id) => {
     let note = [...this.state.note];
     note = note.filter((item) => item.id !== id);
@@ -47,15 +58,26 @@ class Home extends Component {
     );
   };
 
+  /**
+   * Function to search the note in the list
+   * @param value any string to be searched in the note list.
+   */
   searchFunc = (value) => {
     let note = JSON.parse(sessionStorage.getItem("note"));
-    if(value)
-    note = note.filter((item) => item.note.includes(value));
+    if (value)
+      note = note.filter((item) => {
+        return item.note.toLowerCase().search(value.toLowerCase()) !== -1;
+      });
     this.setState({
       note,
     });
   };
 
+  /**
+   * Function to search any string in note list
+   * on pressing enter key
+   * @param e event from the key press.
+   */
   handleKeypress = (e) => {
     if (e.key === "Enter" && e.target.value.length != 0) {
       e.preventDefault();
@@ -63,17 +85,29 @@ class Home extends Component {
     }
   };
 
+  /**
+   * Function to show the pop up data
+   * @param type 1=note, 2=image, 3=location.
+   */
   getPopupData = (type) => {
     switch (type) {
       case 1:
         return <AddNote addNote={(data) => this.addNote(data, "note")} />;
       case 2:
         return <AddImage addNote={(data) => this.addNote(data, "image")} />;
+      case 3:
+        return (
+          <AddLocation addNote={(data) => this.addNote(data, "location")} />
+        );
       default:
         break;
     }
   };
 
+  /**
+   * Function to show the pop up to add a new note
+   * @param type 1=note, 2=image, 3=location.
+   */
   showPopup = (type) => {
     let popup = <Modal close={this.hidePopup}>{this.getPopupData(type)}</Modal>;
     this.setState({
@@ -81,6 +115,9 @@ class Home extends Component {
     });
   };
 
+  /**
+   * Function to close the pop up
+   */
   hidePopup = () => {
     this.setState({
       showPopup: false,
@@ -115,10 +152,10 @@ class Home extends Component {
         </button>
         {showPopup}
         <div className={classes.wrapper}>
-            <SearchInput
-              searchFunc={this.searchFunc}
-              handleKeypress={this.handleKeypress}
-            />
+          <SearchInput
+            searchFunc={this.searchFunc}
+            handleKeypress={this.handleKeypress}
+          />
           <div>
             <NoteList note={note} deleteNote={this.deleteNote} />
           </div>
