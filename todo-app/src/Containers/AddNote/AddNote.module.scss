@@ -15,9 +15,13 @@
     border: 1px solid rgba($black, 0.5);
     border-radius: 8px;
     margin-bottom: 30px;
+    outline: none;
 }
 
 .button {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
     height: 40px;
     padding: 20px;
     box-sizing: border-box;
@@ -28,6 +32,5 @@
     background: $Carnation;
     color: $white;
     font-size: 16px;
-    margin: 0px 40px;
     cursor: pointer;
 }

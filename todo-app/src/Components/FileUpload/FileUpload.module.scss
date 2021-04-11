@@ -1,0 +1,18 @@
+@import "../../Assets/Sass/all";
+
+.button {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: $Carnation;
+    color: $white;
+    font-size: 16px;
+    margin:0 0 40px 0;
+    cursor: pointer;
+}
+
+.prdfucsection {
+    text-align: left;
+}

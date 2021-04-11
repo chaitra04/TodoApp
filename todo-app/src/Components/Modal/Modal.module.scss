@@ -10,10 +10,11 @@
     bottom: 0;
     margin: auto;
     z-index: 1001;
-    background-color: rgba($black, 0.16);
+    background-color: rgb(0 0 0 / 56%);
 }
 
 .wrapper {
+    height: 500px;
     position: absolute;
     left: 25%;
     right: 25%;
@@ -21,7 +22,6 @@
     bottom: 25%;
     margin: auto;
     background: $white;
-    height: 584px;
     overflow-y: auto;
     border-radius: 6px;
 }

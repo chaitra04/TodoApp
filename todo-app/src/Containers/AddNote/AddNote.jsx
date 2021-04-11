@@ -26,7 +26,7 @@ const AddNote = ({ addNote }) => {
         className={classes.button}
         onClick={(event) => {
           event.stopPropagation();
-          addNote(note);
+          note && addNote(note);
         }}
       >
         Add the Note

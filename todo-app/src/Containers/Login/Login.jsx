@@ -20,7 +20,7 @@ class Login extends Component {
   loginFunc = () => {
     const { username, password } = this.state;
     if (username && password) {
-      let token = jwt.sign({ username, password }, "jwtSecret");
+      let token = jwt.sign({ username, password }, process.env.REACT_APP_JWT_SECRET_KEY);
       sessionStorage.setItem("jwtAuth", token);
       this.props.history.push("/home");
       console.log(token);
